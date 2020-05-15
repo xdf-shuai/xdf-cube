@@ -1,0 +1,75 @@
+{
+	"policy_head":
+	{
+		"name":"addr_init",
+       	"type":"DELIVER",
+        "ljump":1,
+	},
+	"MATCH_RULES":
+	[
+		{"op":"AND","type":"MESSAGE","subtype":"CONN_ACKI"}
+	],
+	"ROUTE_RULES":
+	{
+		"main_policy":[
+			{"target_type":"LOCAL","target_name":"user_label"}
+		]
+	}
+}
+{
+	"policy_head":
+	{
+		"name":"login",
+       	"type":"ASPECT",
+        "ljump":1,
+        "newname":"addr_label",
+	},
+	"MATCH_RULES":
+	[
+		{"op":"AND","type":"USER_DEFINE","subtype":"LOGIN"}
+	],
+	"ROUTE_RULES":
+	{
+		"main_policy":[
+			{"target_type":"LOCAL","target_name":"user_label"}
+		]
+	}
+}
+{
+	"policy_head":
+	{
+		"name":"login",
+       	"type":"ASPECT",
+        "ljump":2,
+        "newname":"addr_verify",
+	},
+	"MATCH_RULES":
+	[
+		{"op":"AND","type":"USER_DEFINE","subtype":"RETURN"}
+	],
+	"ROUTE_RULES":
+	{
+		"main_policy":[
+			{"target_type":"LOCAL","target_name":"user_label"}
+		]
+	}
+}
+{
+	"policy_head":
+	{
+		"name":"record",
+       	"type":"ASPECT",
+        "ljump":1,
+        "newname":"user_label",
+	},
+	"MATCH_RULES":
+	[
+		{"op":"AND","type":"RECORD_DEFINE"}
+	],
+	"ROUTE_RULES":
+	{
+		"main_policy":[
+			{"target_type":"LOCAL","target_name":"user_label"}
+		]
+	}
+}

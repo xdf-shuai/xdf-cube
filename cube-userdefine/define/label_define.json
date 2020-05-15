@@ -1,0 +1,82 @@
+{
+	"head":
+	{
+		"name":"dtype_label_define",
+		"type":"TYPELIST"
+	},
+	"record":
+	{
+		"elem_no":1,
+		"elemlist":
+		[
+			"LABEL_DEFINE=0x3220",
+		]
+	}
+}
+{
+	"head":
+	{
+		"name":"subtype_label_define",
+		"type":"SUBTYPELIST"
+	},
+	"record":
+	{
+		"type":"LABEL_DEFINE",
+		"elem_no":2,
+		"elemlist":
+		[
+			"ADDR",
+			"USER"
+		]
+	}
+}
+{
+	"head":
+	{
+		"name":"label_define_addr",
+		"type":"RECORDTYPE"
+	},
+	"record":
+	{
+		"type":"LABEL_DEFINE",
+		"subtype":"ADDR",
+		"struct_desc":
+		{
+			"elem_desc":
+			[
+				{"name":"node_uuid","type":"UUID"},
+				{"name":"proc_name","type":"STRING","size":32},
+				{"name":"user_name","type":"ESTRING","size":32},
+				{"name":"role","type":"ENUM","ref_name":"enum_role_type"}
+			]
+		}
+        "flag_no":1,
+		"index":
+		[
+        	{
+            	 "flag":"INDEX",
+             	"elemlist":"node_uuid,proc_name"
+        	}
+		]
+	}
+}
+{
+	"head":
+	{
+		"name":"label_define_user",
+		"type":"RECORDTYPE"
+	},
+	"record":
+	{
+		"type":"LABEL_DEFINE",
+		"subtype":"USER",
+		"struct_desc":
+		{
+			"elem_desc":
+			[
+				{"name":"user_name","type":"ESTRING","size":32},
+				{"name":"role","type":"ENUM","ref_name":"enum_role_type"}
+			]
+		}
+	}
+}

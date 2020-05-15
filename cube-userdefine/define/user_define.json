@@ -1,0 +1,190 @@
+{
+	"head":
+	{
+		"name":"dtype_user_define",
+		"type":"TYPELIST"
+	},
+	"record":
+	{
+		"elem_no":1,
+		"elemlist":
+		[
+			"USER_DEFINE=0x3200",
+		]
+	}
+}
+{
+	"head":
+	{
+		"name":"subtype_user_define",
+		"type":"SUBTYPELIST"
+	},
+	"record":
+	{
+		"type":"USER_DEFINE",
+		"elem_no":4,
+		"elemlist":
+		[
+			"LOGIN",
+			"CLIENT_STATE",
+			"SERVER_STATE",
+			"RETURN"
+		]
+	}
+}
+{
+	"head":
+	{
+		"name":"enum_role_type",
+		"type":"NAMELIST"
+	},
+	"record":
+	{
+		"elem_no":3,
+		"elemlist":
+		[
+			"Teacher",
+			"Student",
+			"Director"
+		]
+	}
+}
+{
+	"head":
+	{
+		"name":"enum_user_state",
+		"type":"NAMELIST"
+	},
+	"record":
+	{
+		"elem_no":3,
+		"elemlist":
+		[
+			"WAIT",
+			"LOGIN",
+			"ERROR"
+		]
+	}
+}
+{
+	"head":
+	{
+		"name":"enum_login_state",
+		"type":"NAMELIST"
+	},
+	"record":
+	{
+		"elem_no":5,
+		"elemlist":
+		[
+			"SUCCEED",
+			"INVALID",
+			"NOUSER",
+			"AUTHFAIL",
+			"NOACCESS"
+		]
+	}
+}
+{
+	"head":
+	{
+		"name":"user_define_login",
+		"type":"RECORDTYPE"
+	},
+	"record":
+	{
+		"type":"USER_DEFINE",
+		"subtype":"LOGIN",
+		"struct_desc":
+		{
+			"elem_desc":
+			[
+				{"name":"user_name","type":"ESTRING","size":32},
+				{"name":"passwd","type":"STRING","size":32},
+				{"name":"proc_name","type":"STRING","size":32},
+				{"name":"machine_uuid","type":"UUID"}
+			]
+		}
+	}
+}
+{
+	"head":
+	{
+		"name":"user_define_client_state",
+		"type":"RECORDTYPE"
+	},
+	"record":
+	{
+		"type":"USER_DEFINE",
+		"subtype":"CLIENT_STATE",
+		"struct_desc":
+		{
+			"elem_desc":
+			[
+				{"name":"user_name","type":"ESTRING","size":32},
+				{"name":"curr_state","type":"ENUM","ref_name":"enum_user_state"},
+				{"name":"user_info","type":"ESTRING","size":512},
+			]
+		}
+		"flag_no":1,
+		"index":
+		[
+        	{
+            	 "flag":"INDEX",
+             	"elemlist":"user_name"
+        	}
+		]
+	}
+}
+{
+	"head":
+	{
+		"name":"user_define_server_state",
+		"type":"RECORDTYPE"
+	},
+	"record":
+	{
+		"type":"USER_DEFINE",
+		"subtype":"SERVER_STATE",
+		"struct_desc":
+		{
+			"elem_desc":
+			[
+				{"name":"user_name","type":"ESTRING","size":32},
+				{"name":"node_uuid","type":"UUID"},
+				{"name":"proc_name","type":"STRING","size":32},
+				{"name":"passwd","type":"ESTRING","size":32},
+				{"name":"role","type":"ENUM","ref_name":"enum_role_type"},
+				{"name":"curr_state","type":"ENUM","ref_name":"enum_login_state"}
+			]
+		}
+		"flag_no":1,
+		"index":
+		[
+        	{
+            	 "flag":"INDEX",
+             	"elemlist":"user_name,role"
+        	}
+		]
+	}
+}
+{
+	"head":
+	{
+		"name":"user_define_return",
+		"type":"RECORDTYPE"
+	},
+	"record":
+	{
+		"type":"USER_DEFINE",
+		"subtype":"RETURN",
+		"struct_desc":
+		{
+			"elem_desc":
+			[
+				{"name":"return_code","type":"ENUM","ref_name":"enum_login_state"},
+				{"name":"return_info","type":"ESTRING","size":128}
+			]
+		}
+	}
+}

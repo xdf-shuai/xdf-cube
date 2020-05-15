@@ -1,0 +1,37 @@
+time: 0.000243 :read 3 elem from file /home/xdf/cube-1.3/proc/main/base_define/namelist.json!
+time: 0.006722 :read 4 elem from file /home/xdf/cube-1.3/proc/main/base_define/dispatchnamelist.json!
+time: 0.006823 :read 1 elem from file /home/xdf/cube-1.3/proc/main/base_define/typelist.json!
+time: 0.007199 :read 7 elem from file /home/xdf/cube-1.3/proc/main/base_define/subtypelist.json!
+time: 0.007333 :read 1 elem from file /home/xdf/cube-1.3/proc/main/base_define/baseflag.json!
+time: 0.007667 :read 3 elem from file /home/xdf/cube-1.3/proc/main/base_define/memdb.json!
+time: 0.008375 :read 7 elem from file /home/xdf/cube-1.3/proc/main/base_define/msghead.json!
+time: 0.008655 :read 2 elem from file /home/xdf/cube-1.3/proc/main/base_define/msgrecord.json!
+time: 0.009182 :read 10 elem from file /home/xdf/cube-1.3/proc/main/base_define/base_msg.json!
+time: 0.009509 :read 8 elem from file /home/xdf/cube-1.3/proc/main/base_define/return.json!
+time: 0.009720 :read 3 elem from file /home/xdf/cube-1.3/proc/main/base_define/dispatchrecord.json!
+time: 0.009818 :read 2 elem from file /home/xdf/cube-1.3/proc/main/base_define/exmoduledefine.json!
+time: 0.009911 :read 1 elem from file /home/xdf/cube-1.3/proc/main/base_define/sys_conn.json!
+time: 0.010324 :read 9 elem from file user_define.json!
+time: 0.010514 :read 5 elem from file record_define.json!
+time: 0.015967 :this machine's local uuid is c8bd1262e8a391d912ade24f970c3817bf4a5f5f8b481d50353d0a0847ffee59
+
+time: 0.022461 :read 1 connector!
+
+time: 0.022664 :read 2 policy from router_policy file!
+time: 0.022713 :system plugin router_proc is prepared!
+time: 0.028142 :system plugin connector_proc is prepared!
+time: 0.028246 :ex_module connector_proc started successfully!
+time: 0.028299 :ex_module router_proc started successfully!
+time: 0.028332 :ex_module msg_send started successfully!
+time: 0.028379 :begin msgfile_send module!
+
+essfully!
+time: 0.028386 :instance load 4 module!
+
+!
+
+time: 0.028386 :instance load 4 module!
+
+time: 2.031745 :router get proc msg_send's message 
+time: 2.031780 :new msg match path login's policy
+time: 2.031860 :send message to conn process!

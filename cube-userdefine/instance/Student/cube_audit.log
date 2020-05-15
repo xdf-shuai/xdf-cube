@@ -1,0 +1,50 @@
+time: 0.000491 :read 3 elem from file /home/xdf/cube-1.3/proc/main/base_define/namelist.json!
+time: 0.000592 :read 4 elem from file /home/xdf/cube-1.3/proc/main/base_define/dispatchnamelist.json!
+time: 0.000641 :read 1 elem from file /home/xdf/cube-1.3/proc/main/base_define/typelist.json!
+time: 0.000951 :read 7 elem from file /home/xdf/cube-1.3/proc/main/base_define/subtypelist.json!
+time: 0.001011 :read 1 elem from file /home/xdf/cube-1.3/proc/main/base_define/baseflag.json!
+time: 0.001264 :read 3 elem from file /home/xdf/cube-1.3/proc/main/base_define/memdb.json!
+time: 0.001907 :read 7 elem from file /home/xdf/cube-1.3/proc/main/base_define/msghead.json!
+time: 0.002098 :read 2 elem from file /home/xdf/cube-1.3/proc/main/base_define/msgrecord.json!
+time: 0.002521 :read 10 elem from file /home/xdf/cube-1.3/proc/main/base_define/base_msg.json!
+time: 0.002922 :read 8 elem from file /home/xdf/cube-1.3/proc/main/base_define/return.json!
+time: 0.003136 :read 3 elem from file /home/xdf/cube-1.3/proc/main/base_define/dispatchrecord.json!
+time: 0.003228 :read 2 elem from file /home/xdf/cube-1.3/proc/main/base_define/exmoduledefine.json!
+time: 0.003318 :read 1 elem from file /home/xdf/cube-1.3/proc/main/base_define/sys_conn.json!
+time: 0.003889 :read 9 elem from file user_define.json!
+time: 0.007991 :this machine's local uuid is c8bd1262e8a391d912ade24f970c3817bf4a5f5f8b481d50353d0a0847ffee59
+
+time: 0.013927 :read 1 connector!
+
+time: 0.014186 :read 1 policy from router_policy file!
+time: 0.014217 :system plugin router_proc is prepared!
+time: 0.020448 :system plugin connector_proc is prepared!
+time: 0.020558 :ex_module connector_proc started successfully!
+time: 0.020640 :ex_module router_proc started successfully!
+time: 0.020687 :ex_module msg_send started successfully!
+time: 0.020710 :begin msgfile_send module!
+
+time: 0.020731 :ex_module print started successfully!
+time: 0.020741 :instance load 4 module!
+
+time: 0.027120 :client user_client connect succeed!
+
+time: 0.032715 :proc conn client receive 269 data!
+
+time: 0.032818 :send 330 data to conn user_client!
+
+time: 0.032830 :client user_client send 330 ack data to server !
+
+time: 0.038664 :router get proc connector_proc's message 
+time: 2.023477 :router get proc msg_send's message 
+time: 2.023522 :new msg match path login's policy
+time: 2.023586 :send message to conn process!
+time: 2.028497 :send 284 data to conn user_client!
+
+time: 2.028519 :send (12800  1)message 284 to conn user_client!
+
+time: 2.048435 :proc conn client receive 200 data!
+
+time: 2.052354 :router get proc connector_proc's message 
+time: 2.052406 :remote msg match path login's policy
+time: 2.058339 :router get proc print's message 

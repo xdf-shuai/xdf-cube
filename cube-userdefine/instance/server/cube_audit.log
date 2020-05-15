@@ -1,0 +1,47 @@
+time: 0.000241 :read 3 elem from file /home/xdf/cube-1.3/proc/main/base_define/namelist.json!
+time: 0.000330 :read 4 elem from file /home/xdf/cube-1.3/proc/main/base_define/dispatchnamelist.json!
+time: 0.000374 :read 1 elem from file /home/xdf/cube-1.3/proc/main/base_define/typelist.json!
+time: 0.000523 :read 7 elem from file /home/xdf/cube-1.3/proc/main/base_define/subtypelist.json!
+time: 0.000561 :read 1 elem from file /home/xdf/cube-1.3/proc/main/base_define/baseflag.json!
+time: 0.000728 :read 3 elem from file /home/xdf/cube-1.3/proc/main/base_define/memdb.json!
+time: 0.001216 :read 7 elem from file /home/xdf/cube-1.3/proc/main/base_define/msghead.json!
+time: 0.001418 :read 2 elem from file /home/xdf/cube-1.3/proc/main/base_define/msgrecord.json!
+time: 0.001791 :read 10 elem from file /home/xdf/cube-1.3/proc/main/base_define/base_msg.json!
+time: 0.002183 :read 8 elem from file /home/xdf/cube-1.3/proc/main/base_define/return.json!
+time: 0.002384 :read 3 elem from file /home/xdf/cube-1.3/proc/main/base_define/dispatchrecord.json!
+time: 0.002480 :read 2 elem from file /home/xdf/cube-1.3/proc/main/base_define/exmoduledefine.json!
+time: 0.002576 :read 1 elem from file /home/xdf/cube-1.3/proc/main/base_define/sys_conn.json!
+time: 0.002983 :read 9 elem from file user_define.json!
+time: 0.006678 :this machine's local uuid is c8bd1262e8a391d912ade24f970c3817bf4a5f5f8b481d50353d0a0847ffee59
+
+time: 0.012626 :read 1 connector!
+
+time: 0.012641 :conn server user_server begin to listen!
+
+time: 0.012742 :read 1 policy from router_policy file!
+time: 0.012766 :system plugin router_proc is prepared!
+time: 0.017943 :system plugin connector_proc is prepared!
+time: 0.018158 :ex_module connector_proc started successfully!
+time: 0.018230 :ex_module router_proc started successfully!
+time: 0.018310 :ex_module user_server started successfully!
+time: 0.018329 :instance load 3 module!
+
+time: 1.033429 :create a new channel e8000b20!
+
+time: 1.033625 :send 269 data to conn (null)!
+
+time: 1.035663 :channel set name Student!
+
+time: 1.041502 :router get proc connector_proc's message 
+time: 3.033204 :channel receive (12800 1) message from conn Student!
+
+time: 3.033236 :client forward (12800 1) message to main proc!
+
+time: 3.037165 :router get proc connector_proc's message 
+time: 3.037207 :remote msg match path login's policy
+time: 3.043130 :router get proc user_server's message 
+time: 3.043242 :send message to conn process!
+time: 3.045204 :send 200 data to conn Student!
+
+time: 3.045220 :send (12800  4)message 200 to conn Student!
+

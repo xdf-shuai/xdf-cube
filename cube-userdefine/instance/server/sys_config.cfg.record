@@ -1,0 +1,6 @@
+{
+	"define_file":[
+		"user_define.json",
+		"record_define.json"
+	]
+}

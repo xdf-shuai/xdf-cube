@@ -1,0 +1,24 @@
+{
+	"name":"user_server",
+	"libname":"user_server"
+}
+{
+	"name":"record_server",
+	"libname":"record_server"
+}
+{
+	"name":"user_label",
+	"libname":"user_label"
+}
+{
+	"name":"record_acl",
+	"libname":"record_acl"
+}
+{
+	"name":"login_store",
+	"libname":"msgrecord_store"
+}
+{
+	"name":"recordlib",
+	"libname":"recordlib"
+}
