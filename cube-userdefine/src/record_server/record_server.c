@@ -31,6 +31,7 @@ int record_server_start(void * sub_proc, void * para)
 	void * recv_msg;
 	int type;
 	int subtype;
+	//printf("*********************************************************");
 	// add yorself's module exec func here
 	while(1)
 	{
@@ -63,6 +64,7 @@ int record_server_start(void * sub_proc, void * para)
 int proc_record_write(void * sub_proc,void * recv_msg)
 {
 	int ret;
+	//printf("*********************************************************");
 	RECORD(RECORD_DEFINE,RECORD) * record_data;
 	RECORD(RECORD_DEFINE,WRITE) * write_data;
 	RECORD(USER_DEFINE,RETURN) * return_info;
@@ -102,7 +104,7 @@ int proc_record_write(void * sub_proc,void * recv_msg)
 	ret = struct_write_elem_text(write_data->segment,record_data,write_data->text,record_template);
 	if(ret<0)
 		return -EINVAL;
-
+	//printf("*******************************************************************");
 	memdb_store(record_data,TYPE_PAIR(RECORD_DEFINE,RECORD),NULL);
 
 	return_info->return_code=SUCCEED;
@@ -110,18 +112,21 @@ int proc_record_write(void * sub_proc,void * recv_msg)
 
 	// send a message store notice
     void * type_msg;
+return_info->return_info=dup_str("write data succeed!++++++++++++++++++++\n",0);
     RECORD(MESSAGE,TYPES) types_pair;
-
+return_info->return_info=dup_str("write data succeed!1111111111111111111\n",0);
     types_pair.type=TYPE(RECORD_DEFINE);
+return_info->return_info=dup_str("write data succeed!222222222222222222\n",0);
     types_pair.subtype=SUBTYPE(RECORD_DEFINE,RECORD);
-
+return_info->return_info=dup_str("write data succeed!3333333333333333333\n",0);
     type_msg=message_create(TYPE_PAIR(MESSAGE,TYPES),NULL);
-
+return_info->return_info=dup_str("write data succeed!4444444444444444444444444444\n",0);
     message_add_record(type_msg,&types_pair);
+return_info->return_info=dup_str("write data succeed!555555555555555\n",0);
     ex_module_sendmsg(sub_proc,type_msg);
-	
+	return_info->return_info=dup_str("write data succeed!*************************************\n",0);	
 
-write_out:
+	write_out:
 	new_msg=message_create(TYPE_PAIR(USER_DEFINE,RETURN),recv_msg);	
 	if(new_msg==NULL)
 		return -EINVAL;

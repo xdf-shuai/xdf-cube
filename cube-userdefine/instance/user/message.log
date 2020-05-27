@@ -1,13 +1,83 @@
 
 **************Begin new trust node proc****************************
 {
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"","receiver_uuid":"","route
+    ":"","flow":"FINISH","state":"MATCH","flag":"NULL","ljump":1,"rjump":1,"record_t
+    ype":"MESSAGE","record_subtype":"CONN_SYNI","record_num":1,"record_size":89,"exp
+    and_num":0,"expand_size":0,"msg_uuid":"40eab0fc2a84019610caa725dee50690d017904b2
+    ed0ed173de12c1233666f6f"},
+"RECORD":[
+    {"uuid":"c8bd1262e8a391d912ade24f970c3817bf4a5f5f8b481d50353d0a0847ffee59","serv
+        er_name":"server","service":"trust_server","server_addr":"","flags":0,"nonce":"A
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
  "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"msg_send","receiver_uuid":"
     :user_client","route":"login","flow":"QUERY","state":"MATCH","flag":"NULL","ljum
     p":1,"rjump":1,"record_type":"USER_DEFINE","record_subtype":"LOGIN","record_num"
-    :1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"95c816424f9b385bad
-    3fe0c182c1fbb834e2a5ef6c0c64f60eeafb2153e6c3d7"},
+    :1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"896027e627900f3605
+    a077c9e349a5c85481fec2656e570257fab5ffcc63dfc6"},
 "RECORD":[
     {"user_name":"zhaowen","passwd":"123","proc_name":"","machine_uuid":""}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"f48e92e466b8e3fa53bee854534
+    c6e78c8dac8600667374917fa0ea6ccfa07ec","receiver_uuid":"print","route":"login","
+    flow":"QUERY","state":"RESPONSE","flag":"LOCAL","ljump":1,"rjump":1,"record_type
+    ":"USER_DEFINE","record_subtype":"RETURN","record_num":1,"record_size":20,"expan
+    d_num":0,"expand_size":0,"msg_uuid":"896027e627900f3605a077c9e349a5c85481fec2656
+    e570257fab5ffcc63dfc6"},
+"RECORD":[
+    {"return_code":"SUCCEED","return_info":"login succeed!
+"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"print","receiver_uuid":"","
+    route":"login","flow":"FINISH","state":"RESPONSE","flag":"LOCAL","ljump":2,"rjum
+    p":1,"record_type":"USER_DEFINE","record_subtype":"RETURN","record_num":1,"recor
+    d_size":20,"expand_num":0,"expand_size":0,"msg_uuid":"896027e627900f3605a077c9e3
+    49a5c85481fec2656e570257fab5ffcc63dfc6"},
+"RECORD":[
+    {"return_code":"SUCCEED","return_info":"login succeed!
+"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"msg_send","receiver_uuid":"
+    :user_client","route":"record","flow":"QUERY","state":"MATCH","flag":"NULL","lju
+    mp":1,"rjump":1,"record_type":"RECORD_DEFINE","record_subtype":"WRITE","record_n
+    um":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"98f9c8155792b56
+    c24f3e4dcf00d6b43a652a52d6684a4279b958bcfe4e316e6"},
+"RECORD":[
+    {"record_no":"001","segment":"admin_info","text":"test admin write data"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"msg_send","receiver_uuid":"
+    :user_client","route":"record","flow":"QUERY","state":"MATCH","flag":"NULL","lju
+    mp":1,"rjump":1,"record_type":"RECORD_DEFINE","record_subtype":"READ","record_nu
+    m":1,"record_size":0,"expand_num":0,"expand_size":0,"msg_uuid":"6998b12561e29113
+    551fc3488f54b6f4e1a4bf27a53e2fb6b2c340221e4b4dfc"},
+"RECORD":[
+    {"record_no":"001"}
     ],
 "EXPAND" :[]
 }

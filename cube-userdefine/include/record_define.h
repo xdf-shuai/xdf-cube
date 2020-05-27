@@ -9,8 +9,10 @@ enum subtype_record_define {
 
 typedef struct record_define_record{
 	char * record_no;
-	char * admin_info;
-	char * user_info;
+	char * Ex_time;
+	char * Ex_site;
+	char * Ex_design;
+	char * Ex_paper;
 }__attribute__((packed)) RECORD(RECORD_DEFINE,RECORD);
 
 typedef struct record_define_read{

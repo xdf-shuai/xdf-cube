@@ -4,8 +4,8 @@
  "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"","receiver_uuid":"","route
     ":"","flow":"FINISH","state":"MATCH","flag":"NULL","ljump":1,"rjump":1,"record_t
     ype":"MESSAGE","record_subtype":"CONN_ACKI","record_num":1,"record_size":150,"ex
-    pand_num":0,"expand_size":0,"msg_uuid":"8ec85c0695be87ae2af2c74e2e3b28284ab46bf2
-    782dd1d40d022fd598e10f11"},
+    pand_num":0,"expand_size":0,"msg_uuid":"7ac5de7ebaf5d8c6d7da164e640a12579bf8af28
+    cf1037af47a6b63f7fb8ba6a"},
 "RECORD":[
     {"uuid":"c8bd1262e8a391d912ade24f970c3817bf4a5f5f8b481d50353d0a0847ffee59","clie
         nt_name":"Student","client_proc":"Student","client_addr":"unknown addr","server_
@@ -21,8 +21,8 @@
     8180ef3a8b100205a42d2b5a8183070601e85","receiver_uuid":"user_server","route":"lo
     gin","flow":"QUERY","state":"MATCH","flag":"LOCAL","ljump":1,"rjump":2,"record_t
     ype":"USER_DEFINE","record_subtype":"LOGIN","record_num":1,"record_size":104,"ex
-    pand_num":0,"expand_size":0,"msg_uuid":"7b3b6836bb7737ae98d09456534a1dcae5e7f1d3
-    efb4571542d833f72ace3a7a"},
+    pand_num":0,"expand_size":0,"msg_uuid":"761191a75a46a885701452e3e51e9aa4050cbe8d
+    414ce0db1cd5be236d6f646b"},
 "RECORD":[
     {"user_name":"zhangle","passwd":"123","proc_name":"","machine_uuid":""}
     ],
@@ -35,11 +35,70 @@
     ":"2d36866a5aa030ab7248c2ef4db8180ef3a8b100205a42d2b5a8183070601e85","route":"lo
     gin","flow":"QUERY","state":"RESPONSE","flag":"NULL","ljump":2,"rjump":2,"record
     _type":"USER_DEFINE","record_subtype":"RETURN","record_num":1,"record_size":0,"e
-    xpand_num":0,"expand_size":0,"msg_uuid":"7b3b6836bb7737ae98d09456534a1dcae5e7f1d
-    3efb4571542d833f72ace3a7a"},
+    xpand_num":0,"expand_size":0,"msg_uuid":"761191a75a46a885701452e3e51e9aa4050cbe8
+    d414ce0db1cd5be236d6f646b"},
 "RECORD":[
     {"return_code":"SUCCEED","return_info":"login succeed!
 "}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"2d36866a5aa030ab7248c2ef4db
+    8180ef3a8b100205a42d2b5a8183070601e85","receiver_uuid":"record_server","route":"
+    record","flow":"QUERY","state":"MATCH","flag":"LOCAL","ljump":1,"rjump":2,"recor
+    d_type":"RECORD_DEFINE","record_subtype":"WRITE","record_num":1,"record_size":32
+    ,"expand_num":0,"expand_size":0,"msg_uuid":"731c19be1764ec3b27bd62c9212489407db4
+    0c5b4b5c566ca244256ffeb3e54f"},
+"RECORD":[
+    {"record_no":"001","segment":"Ex_paper","text":"Student is writing"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"record_server","receiver_uu
+    id":"2d36866a5aa030ab7248c2ef4db8180ef3a8b100205a42d2b5a8183070601e85","route":"
+    record","flow":"QUERY","state":"RESPONSE","flag":"NULL","ljump":2,"rjump":2,"rec
+    ord_type":"USER_DEFINE","record_subtype":"RETURN","record_num":1,"record_size":0
+    ,"expand_num":0,"expand_size":0,"msg_uuid":"731c19be1764ec3b27bd62c9212489407db4
+    0c5b4b5c566ca244256ffeb3e54f"},
+"RECORD":[
+    {"return_code":"SUCCEED","return_info":"write data succeed!*********************
+        ****************
+"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"2d36866a5aa030ab7248c2ef4db
+    8180ef3a8b100205a42d2b5a8183070601e85","receiver_uuid":"record_server","route":"
+    record","flow":"QUERY","state":"MATCH","flag":"LOCAL","ljump":1,"rjump":2,"recor
+    d_type":"RECORD_DEFINE","record_subtype":"READ","record_num":1,"record_size":4,"
+    expand_num":0,"expand_size":0,"msg_uuid":"1f9ca1416e2d5ce93b45a5af58b7be29663606
+    c781637f673094a5a32078fb20"},
+"RECORD":[
+    {"record_no":"001"}
+    ],
+"EXPAND" :[]
+}
+
+************************************************************
+{
+ "HEAD":{"tag":"MESG","version":65537,"sender_uuid":"record_server","receiver_uu
+    id":"2d36866a5aa030ab7248c2ef4db8180ef3a8b100205a42d2b5a8183070601e85","route":"
+    record","flow":"QUERY","state":"RESPONSE","flag":"NULL","ljump":2,"rjump":2,"rec
+    ord_type":"RECORD_DEFINE","record_subtype":"RECORD","record_num":1,"record_size"
+    :0,"expand_num":0,"expand_size":0,"msg_uuid":"1f9ca1416e2d5ce93b45a5af58b7be2966
+    3606c781637f673094a5a32078fb20"},
+"RECORD":[
+    {"record_no":"001","Ex_time":"","Ex_site":"","Ex_design":"","Ex_paper":"Student 
+        is writing"}
     ],
 "EXPAND" :[]
 }

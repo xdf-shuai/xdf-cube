@@ -206,7 +206,7 @@ int proc_access_read(void * sub_proc,void * recv_msg)
 	
 	if(user_label->role==Student)
 	{
-		record_data->Ex_design=NULL;	
+		record_data->Ex_paper=NULL;	
 		new_msg=message_create(TYPE_PAIR(RECORD_DEFINE,RECORD),recv_msg);
 		if(new_msg==NULL)
 			return -EINVAL;

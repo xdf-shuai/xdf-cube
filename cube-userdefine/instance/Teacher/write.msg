@@ -4,7 +4,7 @@
 	"mode":"INT"
 }
 {
-	"record_no":"001",
-	"segment":"Ex_design",
+	"record_no":"002",
+	"segment":"Ex_time",
 	"text":"Teacher is writing"
 }
